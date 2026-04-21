@@ -2,15 +2,113 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const navLinks = [
+const mainLinks = [
   { href: "/", label: "Home" },
-  { href: "/research", label: "Research" },
-  { href: "/about", label: "About" },
-  { href: "/ethics", label: "Ethics" },
+  { href: "/pulse-index", label: "Pulse Index" },
+  { href: "/insights", label: "Insights" },
+];
+
+const researchLinks = [
+  { href: "/research", label: "Overview" },
+  { href: "/the-lab", label: "The Lab" },
+  { href: "/publications", label: "Publications" },
+  { href: "/ethics", label: "Data Ethics" },
+];
+
+const partnerLinks = [
+  { href: "/professionals", label: "For Professionals" },
+  { href: "/organizations", label: "For Organizations" },
+];
+
+const companyLinks = [
+  { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];
+
+const allLinks = [
+  ...mainLinks,
+  ...researchLinks,
+  ...partnerLinks,
+  ...companyLinks,
+];
+
+function Dropdown({
+  label,
+  links,
+  pathname,
+}: {
+  label: string;
+  links: { href: string; label: string }[];
+  pathname: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const isActive = links.some((l) =>
+    l.href === "/" ? pathname === "/" : pathname.startsWith(l.href)
+  );
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className={`px-3 py-2 text-sm rounded-lg transition-colors flex items-center gap-1 ${
+          isActive
+            ? "text-brand-600 font-medium"
+            : "text-slate-muted hover:text-foreground hover:bg-surface-alt"
+        }`}
+      >
+        {label}
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      {open && (
+        <div className="absolute top-full left-0 mt-1 bg-surface border border-border rounded-xl shadow-lg py-1.5 min-w-[180px] z-50">
+          {links.map((link) => {
+            const active =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={`block px-4 py-2 text-sm transition-colors ${
+                  active
+                    ? "text-brand-600 bg-brand-50 font-medium"
+                    : "text-slate-muted hover:text-foreground hover:bg-surface-alt"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Header() {
   const pathname = usePathname();
@@ -43,8 +141,8 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => {
+        <nav className="hidden lg:flex items-center gap-0.5">
+          {mainLinks.map((link) => {
             const isActive =
               link.href === "/"
                 ? pathname === "/"
@@ -53,7 +151,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3.5 py-2 text-sm rounded-lg transition-colors ${
+                className={`px-3 py-2 text-sm rounded-lg transition-colors ${
                   isActive
                     ? "text-brand-600 bg-brand-50 font-medium"
                     : "text-slate-muted hover:text-foreground hover:bg-surface-alt"
@@ -63,12 +161,27 @@ export function Header() {
               </Link>
             );
           })}
+          <Dropdown
+            label="Research"
+            links={researchLinks}
+            pathname={pathname}
+          />
+          <Dropdown
+            label="Partners"
+            links={partnerLinks}
+            pathname={pathname}
+          />
+          <Dropdown
+            label="Company"
+            links={companyLinks}
+            pathname={pathname}
+          />
         </nav>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-surface-alt transition-colors"
+          className="lg:hidden p-2 rounded-lg hover:bg-surface-alt transition-colors"
           aria-label="Toggle menu"
         >
           <svg
@@ -98,27 +211,41 @@ export function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border-light bg-surface px-6 py-3">
-          {navLinks.map((link) => {
-            const isActive =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`block px-3 py-2.5 text-sm rounded-lg transition-colors ${
-                  isActive
-                    ? "text-brand-600 bg-brand-50 font-medium"
-                    : "text-slate-muted hover:text-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+        <div className="lg:hidden border-t border-border-light bg-surface px-6 py-3 max-h-[70vh] overflow-y-auto">
+          {[
+            { group: null, links: mainLinks },
+            { group: "Research", links: researchLinks },
+            { group: "Partners", links: partnerLinks },
+            { group: "Company", links: companyLinks },
+          ].map(({ group, links }, gi) => (
+            <div key={gi}>
+              {group && (
+                <p className="text-xs font-semibold text-slate-faint uppercase tracking-wider mt-3 mb-1.5 px-3">
+                  {group}
+                </p>
+              )}
+              {links.map((link) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block px-3 py-2.5 text-sm rounded-lg transition-colors ${
+                      isActive
+                        ? "text-brand-600 bg-brand-50 font-medium"
+                        : "text-slate-muted hover:text-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          ))}
         </div>
       )}
     </header>

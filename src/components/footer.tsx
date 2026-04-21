@@ -4,9 +4,9 @@ export function Footer() {
   return (
     <footer className="bg-surface-alt border-t border-border">
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="col-span-2">
             <div className="flex items-center gap-2.5 mb-3">
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-500 to-coral-500 flex items-center justify-center">
                 <svg
@@ -28,7 +28,7 @@ export function Footer() {
                 Love Pulse Labs
               </span>
             </div>
-            <p className="text-sm text-slate-muted leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-muted leading-relaxed max-w-xs">
               Studying the patterns behind real relationships. A sister company
               of{" "}
               <a
@@ -50,27 +50,52 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/research"
-                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
-                >
-                  Our Methodology
+                <Link href="/pulse-index" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  Pulse Index
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/research#areas"
-                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
-                >
-                  Areas of Study
+                <Link href="/research" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  Methodology
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/ethics"
-                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
-                >
+                <Link href="/the-lab" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  The Lab
+                </Link>
+              </li>
+              <li>
+                <Link href="/publications" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  Publications
+                </Link>
+              </li>
+              <li>
+                <Link href="/insights" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link href="/ethics" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
                   Data Ethics
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Partners */}
+          <div>
+            <h4 className="text-sm font-semibold text-foreground mb-3">
+              Partners
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/professionals" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  For Professionals
+                </Link>
+              </li>
+              <li>
+                <Link href="/organizations" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  For Organizations
                 </Link>
               </li>
             </ul>
@@ -83,18 +108,12 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/about"
-                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
-                >
+                <Link href="/about" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
-                >
+                <Link href="/contact" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
                   Contact
                 </Link>
               </li>
@@ -118,10 +137,7 @@ export function Footer() {
             reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link
-              href="/ethics"
-              className="text-xs text-slate-faint hover:text-slate-muted transition-colors"
-            >
+            <Link href="/ethics" className="text-xs text-slate-faint hover:text-slate-muted transition-colors">
               Privacy & Ethics
             </Link>
           </div>

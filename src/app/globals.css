@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #FAFBFD;
+  --color-foreground: #1a1a2e;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F3F5F9;
+  --color-border: #E2E6EF;
+  --color-border-light: #EEF0F5;
+
+  /* Brand colors */
+  --color-teal-50: #E8FAF8;
+  --color-teal-100: #C4F1EC;
+  --color-teal-200: #8FE3D9;
+  --color-teal-300: #5AD4C6;
+  --color-teal-400: #3BBFB0;
+  --color-teal-500: #2A9D8F;
+  --color-teal-600: #218076;
+  --color-teal-700: #19635C;
+  --color-teal-800: #114742;
+  --color-teal-900: #0B2E2B;
+
+  --color-lavender-50: #F5F3FF;
+  --color-lavender-100: #EDE9FE;
+  --color-lavender-200: #DDD6FE;
+  --color-lavender-300: #C4B5FD;
+  --color-lavender-400: #A78BFA;
+  --color-lavender-500: #8B5CF6;
+  --color-lavender-600: #7C3AED;
+
+  --color-warm-50: #FFF8F3;
+  --color-warm-100: #FFEDD5;
+  --color-warm-200: #FED7AA;
+
+  --color-slate-text: #334155;
+  --color-slate-muted: #64748B;
+  --color-slate-faint: #94A3B8;
+
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-teal-100);
+  color: var(--color-teal-900);
+}

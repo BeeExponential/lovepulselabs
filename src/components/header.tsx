@@ -6,12 +6,14 @@ import { useState, useRef, useEffect } from "react";
 
 const mainLinks = [
   { href: "/", label: "Home" },
-  { href: "/pulse-index", label: "Pulse Index" },
+  { href: "/mission", label: "Mission" },
+  { href: "/protocols", label: "Love Protocols" },
   { href: "/insights", label: "Insights" },
 ];
 
 const researchLinks = [
   { href: "/research", label: "Overview" },
+  { href: "/pulse-index", label: "The Pulse Index" },
   { href: "/the-lab", label: "The Lab" },
   { href: "/publications", label: "Publications" },
   { href: "/ethics", label: "Data Ethics" },

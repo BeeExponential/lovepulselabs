@@ -17,7 +17,7 @@ const tiers = [
       "Never shared externally in any form",
       "Standard data handling per privacy policy",
     ],
-    color: "teal",
+    color: "brand",
   },
   {
     tier: "Tier 2",
@@ -41,7 +41,7 @@ const tiers = [
       "Compensation provided for time and contribution",
       "Full withdrawal rights at any point, data deleted on request",
     ],
-    color: "teal",
+    color: "coral",
   },
 ];
 
@@ -83,10 +83,10 @@ export default function EthicsPage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-50/40 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-50/40 via-background to-background" />
         <div className="relative max-w-6xl mx-auto px-6 pt-16 pb-16 md:pt-20 md:pb-20">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-teal-600 tracking-wide uppercase mb-4">
+            <p className="text-sm font-medium text-brand-500 tracking-wide uppercase mb-4">
               Data Ethics
             </p>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight mb-5">
@@ -122,14 +122,20 @@ export default function EthicsPage() {
             >
               <div
                 className={`px-7 py-4 ${
-                  tier.color === "teal" ? "bg-teal-50" : "bg-lavender-50"
+                  tier.color === "brand"
+                    ? "bg-brand-50"
+                    : tier.color === "lavender"
+                    ? "bg-lavender-50"
+                    : "bg-coral-50"
                 } border-b border-border-light`}
               >
                 <p
                   className={`text-xs font-semibold uppercase tracking-wider ${
-                    tier.color === "teal"
-                      ? "text-teal-600"
-                      : "text-lavender-600"
+                    tier.color === "brand"
+                      ? "text-brand-500"
+                      : tier.color === "lavender"
+                      ? "text-lavender-600"
+                      : "text-coral-600"
                   } mb-1`}
                 >
                   {tier.tier}
@@ -147,9 +153,11 @@ export default function EthicsPage() {
                     <li key={i} className="flex items-start gap-2.5">
                       <svg
                         className={`w-4 h-4 mt-0.5 shrink-0 ${
-                          tier.color === "teal"
-                            ? "text-teal-500"
-                            : "text-lavender-500"
+                          tier.color === "brand"
+                            ? "text-brand-500"
+                            : tier.color === "lavender"
+                            ? "text-lavender-500"
+                            : "text-coral-500"
                         }`}
                         fill="none"
                         viewBox="0 0 24 24"

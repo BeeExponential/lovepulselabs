@@ -5,8 +5,8 @@ const researchAreas = [
     title: "Drift",
     description:
       "The slow, invisible distance that grows between partners. Not caused by fights. Caused by forgetting to notice.",
-    gradient: "from-teal-400 to-teal-600",
-    bg: "bg-teal-50",
+    gradient: "from-brand-400 to-coral-500",
+    bg: "bg-coral-50",
   },
   {
     title: "Desire",
@@ -19,8 +19,8 @@ const researchAreas = [
     title: "Presence",
     description:
       "The quality of being fully here, right now, with the person next to you. No screens, no scripts, just attention.",
-    gradient: "from-teal-300 to-teal-500",
-    bg: "bg-teal-50",
+    gradient: "from-coral-400 to-brand-500",
+    bg: "bg-brand-50",
   },
   {
     title: "Rhythm",
@@ -54,16 +54,16 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-50/60 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-coral-50/60 via-background to-background" />
         <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-teal-600 tracking-wide uppercase mb-4">
+            <p className="text-sm font-medium text-brand-500 tracking-wide uppercase mb-4">
               Relationship Research Lab
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight tracking-tight mb-6">
               We study how love
               <br />
-              <span className="text-teal-600">actually works.</span>
+              <span className="text-brand-500">actually works.</span>
             </h1>
             <p className="text-lg text-slate-muted leading-relaxed mb-8 max-w-lg">
               Love Pulse Labs is a behavioral research company studying the
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/research"
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl hover:from-teal-600 hover:to-teal-700 transition-all shadow-sm"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-coral-500 rounded-xl hover:from-brand-600 hover:to-coral-600 transition-all shadow-sm"
               >
                 Explore Our Research
               </Link>
@@ -127,7 +127,7 @@ export default function Home() {
       <section className="bg-surface-alt border-y border-border-light">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="text-center mb-14">
-            <p className="text-sm font-medium text-teal-600 tracking-wide uppercase mb-3">
+            <p className="text-sm font-medium text-brand-500 tracking-wide uppercase mb-3">
               Early Findings
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
@@ -144,7 +144,7 @@ export default function Home() {
                 key={i}
                 className="bg-surface rounded-2xl p-7 border border-border-light text-center"
               >
-                <p className="text-4xl font-bold text-teal-600 mb-3">
+                <p className="text-4xl font-bold text-brand-500 mb-3">
                   {insight.stat}
                 </p>
                 <p className="text-sm text-slate-muted leading-relaxed">
@@ -158,7 +158,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="bg-gradient-to-br from-teal-50 to-lavender-50 rounded-3xl p-10 md:p-14 text-center border border-border-light">
+        <div className="bg-gradient-to-br from-coral-50 to-lavender-50 rounded-3xl p-10 md:p-14 text-center border border-border-light">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Interested in what we're building?
           </h2>
@@ -169,7 +169,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-7 py-3 text-sm font-medium text-white bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl hover:from-teal-600 hover:to-teal-700 transition-all shadow-sm"
+            className="inline-flex items-center justify-center px-7 py-3 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-coral-500 rounded-xl hover:from-brand-600 hover:to-coral-600 transition-all shadow-sm"
           >
             Get in Touch
           </Link>

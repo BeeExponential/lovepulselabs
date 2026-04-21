@@ -109,7 +109,7 @@ export default function ResearchPage() {
               className="bg-surface rounded-2xl p-7 border border-border-light"
             >
               <div className="flex items-start gap-4">
-                <span className="text-3xl font-bold text-teal-200 leading-none">
+                <span className="text-3xl font-bold text-coral-200 leading-none">
                   {step.step}
                 </span>
                 <div>
@@ -140,7 +140,7 @@ export default function ResearchPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Drift */}
             <div className="bg-surface rounded-2xl p-7 border border-border-light">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-coral-500 flex items-center justify-center mb-4">
                 <span className="text-white text-sm font-bold">D</span>
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -178,7 +178,7 @@ export default function ResearchPage() {
 
             {/* Presence */}
             <div className="bg-surface rounded-2xl p-7 border border-border-light">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-300 to-teal-500 flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-coral-400 to-brand-500 flex items-center justify-center mb-4">
                 <span className="text-white text-sm font-bold">P</span>
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -238,7 +238,7 @@ export default function ResearchPage() {
               <ul className="space-y-2.5">
                 {category.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-1.5 shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-400 mt-1.5 shrink-0" />
                     <span className="text-sm text-slate-muted">{item}</span>
                   </li>
                 ))}

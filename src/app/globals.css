@@ -1,25 +1,33 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #FAFBFD;
+  --color-background: #FAF7F2;
   --color-foreground: #1a1a2e;
-  --color-surface: #FFFFFF;
-  --color-surface-alt: #F3F5F9;
-  --color-border: #E2E6EF;
-  --color-border-light: #EEF0F5;
+  --color-surface: #FFFDF9;
+  --color-surface-alt: #F5F0E8;
+  --color-border: #E8E0D4;
+  --color-border-light: #F0EAE0;
 
-  /* Brand colors */
-  --color-teal-50: #E8FAF8;
-  --color-teal-100: #C4F1EC;
-  --color-teal-200: #8FE3D9;
-  --color-teal-300: #5AD4C6;
-  --color-teal-400: #3BBFB0;
-  --color-teal-500: #2A9D8F;
-  --color-teal-600: #218076;
-  --color-teal-700: #19635C;
-  --color-teal-800: #114742;
-  --color-teal-900: #0B2E2B;
+  /* Brand red (LVRS FRVR family) */
+  --color-brand-50: #FFF1F0;
+  --color-brand-100: #FFE0DD;
+  --color-brand-200: #FFC7C2;
+  --color-brand-300: #FFA099;
+  --color-brand-400: #FF6B5E;
+  --color-brand-500: #EF4444;
+  --color-brand-600: #DC2626;
+  --color-brand-700: #B91C1C;
 
+  /* Warm coral / pinkish-orange */
+  --color-coral-50: #FFF5F0;
+  --color-coral-100: #FFE8DB;
+  --color-coral-200: #FFD0B5;
+  --color-coral-300: #FFB088;
+  --color-coral-400: #FF8C5E;
+  --color-coral-500: #F97316;
+  --color-coral-600: #EA580C;
+
+  /* Lavender (keeping) */
   --color-lavender-50: #F5F3FF;
   --color-lavender-100: #EDE9FE;
   --color-lavender-200: #DDD6FE;
@@ -27,10 +35,6 @@
   --color-lavender-400: #A78BFA;
   --color-lavender-500: #8B5CF6;
   --color-lavender-600: #7C3AED;
-
-  --color-warm-50: #FFF8F3;
-  --color-warm-100: #FFEDD5;
-  --color-warm-200: #FED7AA;
 
   --color-slate-text: #334155;
   --color-slate-muted: #64748B;
@@ -45,13 +49,11 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
 ::selection {
-  background: var(--color-teal-100);
-  color: var(--color-teal-900);
+  background: var(--color-brand-100);
+  color: var(--color-brand-700);
 }

@@ -35,10 +35,10 @@ export default function AboutPage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-50/40 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-coral-50/40 via-background to-background" />
         <div className="relative max-w-6xl mx-auto px-6 pt-16 pb-16 md:pt-20 md:pb-20">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-teal-600 tracking-wide uppercase mb-4">
+            <p className="text-sm font-medium text-brand-500 tracking-wide uppercase mb-4">
               About Us
             </p>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight mb-5">
@@ -100,7 +100,7 @@ export default function AboutPage() {
                   href="https://lvrsfrvr.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-600 hover:text-teal-700 transition-colors font-medium"
+                  className="text-brand-500 hover:text-brand-600 transition-colors font-medium"
                 >
                   LVRS FRVR
                 </a>
@@ -124,7 +124,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Approach (Vanessa Van Edwards-style) */}
+      {/* Our Approach */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="max-w-3xl mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-3">
@@ -154,7 +154,7 @@ export default function AboutPage() {
       </section>
 
       {/* What We're Working Toward */}
-      <section className="bg-gradient-to-br from-teal-50 to-lavender-50 border-y border-border-light">
+      <section className="bg-gradient-to-br from-coral-50 to-lavender-50 border-y border-border-light">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold text-foreground mb-6">
@@ -183,7 +183,7 @@ export default function AboutPage() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl hover:from-teal-600 hover:to-teal-700 transition-all shadow-sm"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-coral-500 rounded-xl hover:from-brand-600 hover:to-coral-600 transition-all shadow-sm"
             >
               Partner With Us
             </Link>

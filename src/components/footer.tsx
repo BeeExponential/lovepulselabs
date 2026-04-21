@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-500 to-coral-500 flex items-center justify-center">
                 <svg
                   width="14"
                   height="14"
@@ -35,7 +35,7 @@ export function Footer() {
                 href="https://lvrsfrvr.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-teal-600 hover:text-teal-700 transition-colors"
+                className="text-brand-500 hover:text-brand-600 transition-colors"
               >
                 LVRS FRVR
               </a>
@@ -52,7 +52,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/research"
-                  className="text-sm text-slate-muted hover:text-teal-600 transition-colors"
+                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
                 >
                   Our Methodology
                 </Link>
@@ -60,7 +60,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/research#areas"
-                  className="text-sm text-slate-muted hover:text-teal-600 transition-colors"
+                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
                 >
                   Areas of Study
                 </Link>
@@ -68,7 +68,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/ethics"
-                  className="text-sm text-slate-muted hover:text-teal-600 transition-colors"
+                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
                 >
                   Data Ethics
                 </Link>
@@ -85,7 +85,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-slate-muted hover:text-teal-600 transition-colors"
+                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
                 >
                   About Us
                 </Link>
@@ -93,7 +93,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-slate-muted hover:text-teal-600 transition-colors"
+                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
                 >
                   Contact
                 </Link>
@@ -103,7 +103,7 @@ export function Footer() {
                   href="https://lvrsfrvr.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-muted hover:text-teal-600 transition-colors"
+                  className="text-sm text-slate-muted hover:text-brand-500 transition-colors"
                 >
                   LVRS FRVR
                 </a>

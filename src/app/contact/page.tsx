@@ -12,7 +12,7 @@ const contactTypes = [
     description:
       "Universities, research institutions, and academic collaborators interested in working with our dataset or methodology.",
     email: "research@lovepulselabs.com",
-    gradient: "from-teal-400 to-teal-600",
+    gradient: "from-brand-400 to-coral-500",
   },
   {
     title: "Enterprise & Wellness",
@@ -26,7 +26,7 @@ const contactTypes = [
     description:
       "Journalists, podcasters, and content creators looking for expert commentary or data-backed relationship insights.",
     email: "press@lovepulselabs.com",
-    gradient: "from-teal-300 to-teal-500",
+    gradient: "from-coral-400 to-brand-500",
   },
   {
     title: "General Inquiries",
@@ -95,7 +95,7 @@ export default function ContactPage() {
               </p>
               <a
                 href={`mailto:${type.email}`}
-                className="text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors"
+                className="text-sm font-medium text-brand-500 hover:text-brand-600 transition-colors"
               >
                 {type.email}
               </a>

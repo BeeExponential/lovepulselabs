@@ -21,7 +21,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-coral-500 flex items-center justify-center">
             <svg
               width="16"
               height="16"
@@ -55,7 +55,7 @@ export function Header() {
                 href={link.href}
                 className={`px-3.5 py-2 text-sm rounded-lg transition-colors ${
                   isActive
-                    ? "text-teal-700 bg-teal-50 font-medium"
+                    ? "text-brand-600 bg-brand-50 font-medium"
                     : "text-slate-muted hover:text-foreground hover:bg-surface-alt"
                 }`}
               >
@@ -111,7 +111,7 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={`block px-3 py-2.5 text-sm rounded-lg transition-colors ${
                   isActive
-                    ? "text-teal-700 bg-teal-50 font-medium"
+                    ? "text-brand-600 bg-brand-50 font-medium"
                     : "text-slate-muted hover:text-foreground"
                 }`}
               >

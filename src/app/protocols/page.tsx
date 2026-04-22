@@ -36,7 +36,7 @@ const protocols = [
       "Our data shows that couples who initiate repair within 4 hours of conflict show 3.8x higher relationship stability than those who wait 24+ hours. The repair doesn't have to be perfect. It has to be soon.",
     steps: [
       "Within 4 hours of a disagreement, one partner reaches out",
-      "The reach-out is not an apology demand. It's a reconnection bid: 'I don't want to be in this space with you.'",
+      "The reach-out is not an apology demand. It's a reconnection pulse: 'I don't want to be in this space with you.'",
       "Acknowledge the other person's perspective in one sentence",
       "Agree on when to talk about it properly (but don't require immediate resolution)",
     ],
@@ -64,12 +64,12 @@ const protocols = [
   },
   {
     number: "04",
-    title: "The Desire Bid",
+    title: "The Desire Pulse",
     condition: "Desire Maintenance",
     frequency: "2-3 times per week",
     timeNeeded: "1 minute",
     description:
-      "In 68% of couples showing early drift signals, one partner initiates connection attempts 4x more often than the other. This asymmetry is the earliest predictor of disconnection. The Desire Bid rebalances it.",
+      "In 68% of couples showing early drift signals, one partner initiates connection attempts 4x more often than the other. This asymmetry is the earliest predictor of disconnection. The Desire Pulse rebalances it.",
     steps: [
       "Notice when your partner is doing something mundane (cooking, reading, working)",
       "Interrupt gently with a specific, positive observation: 'I like watching you do that.'",
@@ -77,7 +77,7 @@ const protocols = [
       "Ask a curiosity question you don't already know the answer to",
     ],
     dataPoint:
-      "Couples with balanced initiation patterns (neither partner initiating more than 60% of connection bids) show the lowest drift scores in our data.",
+      "Couples with balanced initiation patterns (neither partner initiating more than 60% of connection pulses) show the lowest drift scores in our data.",
     gradient: "from-lavender-300 to-lavender-500",
   },
   {

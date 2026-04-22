@@ -19,11 +19,6 @@ const researchLinks = [
   { href: "/ethics", label: "Data Ethics" },
 ];
 
-const partnerLinks = [
-  { href: "/professionals", label: "For Professionals" },
-  { href: "/organizations", label: "For Organizations" },
-];
-
 const companyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
@@ -32,7 +27,6 @@ const companyLinks = [
 const allLinks = [
   ...mainLinks,
   ...researchLinks,
-  ...partnerLinks,
   ...companyLinks,
 ];
 
@@ -169,11 +163,6 @@ export function Header() {
             pathname={pathname}
           />
           <Dropdown
-            label="Partners"
-            links={partnerLinks}
-            pathname={pathname}
-          />
-          <Dropdown
             label="Company"
             links={companyLinks}
             pathname={pathname}
@@ -217,7 +206,6 @@ export function Header() {
           {[
             { group: null, links: mainLinks },
             { group: "Research", links: researchLinks },
-            { group: "Partners", links: partnerLinks },
             { group: "Company", links: companyLinks },
           ].map(({ group, links }, gi) => (
             <div key={gi}>

@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  getReportsNewestFirst,
+  quarterLabel,
+} from "@/lib/pulse-reports";
 
 export const metadata: Metadata = {
   title: "The Pulse Index",
@@ -71,6 +75,7 @@ const dimensions = [
 ];
 
 export default function PulseIndexPage() {
+  const reports = getReportsNewestFirst();
   return (
     <div>
       {/* Hero */}
@@ -95,6 +100,34 @@ export default function PulseIndexPage() {
           </div>
         </div>
       </section>
+
+      {/* Published Reports */}
+      {reports.length > 0 && (
+        <section className="max-w-6xl mx-auto px-6 pt-4 pb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
+            Published reports
+          </h2>
+          <div className="space-y-4">
+            {reports.map((r) => (
+              <Link
+                key={r.slug}
+                href={`/pulse-index/${r.slug}`}
+                className="block bg-surface rounded-2xl p-6 border border-border-light hover:border-brand-200 transition-colors"
+              >
+                <p className="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">
+                  {quarterLabel(r.quarter)} {r.year}
+                </p>
+                <h3 className="text-lg font-semibold text-foreground mb-2 leading-snug">
+                  {r.title}
+                </h3>
+                <p className="text-sm text-slate-muted leading-relaxed line-clamp-2">
+                  {r.summary}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* What Is It */}
       <section className="max-w-6xl mx-auto px-6 py-16">

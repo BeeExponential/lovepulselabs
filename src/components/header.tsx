@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
@@ -14,6 +15,7 @@ const mainLinks = [
 const researchLinks = [
   { href: "/research", label: "Overview" },
   { href: "/pulse-index", label: "The Pulse Index" },
+  { href: "/lexicon", label: "Lexicon" },
   { href: "/the-lab", label: "The Lab" },
   { href: "/publications", label: "Publications" },
   { href: "/ethics", label: "Data Ethics" },
@@ -21,6 +23,7 @@ const researchLinks = [
 
 const companyLinks = [
   { href: "/about", label: "About Us" },
+  { href: "/press", label: "Press" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -115,22 +118,14 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-coral-500 flex items-center justify-center">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 6.36 2.64" />
-              <path d="M21 12a9 9 0 0 1-9 9 9 9 0 0 1-6.36-2.64" />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
-          </div>
+          <Image
+            src="/logo/love-pulse-labs.svg"
+            alt="Love Pulse Labs"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+            priority
+          />
           <span className="text-lg font-semibold text-foreground tracking-tight">
             Love Pulse Labs
           </span>

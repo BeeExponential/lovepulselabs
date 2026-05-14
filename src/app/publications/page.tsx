@@ -1,28 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getReportsNewestFirst, quarterLabel } from "@/lib/pulse-reports";
 
 export const metadata: Metadata = {
   title: "Publications",
   description:
     "Quarterly reports, research papers, and open data from Love Pulse Labs. Full methodology and limitations disclosed.",
 };
-
-const quarterlyReports = [
-  {
-    title: "Q1 2026 Pulse Index Report",
-    subtitle: "Relationship Health Trends: January - March 2026",
-    description:
-      "Our inaugural quarterly report. Baseline Pulse Index scores across our research population, initial drift patterns, seasonal variation in repair velocity, and methodology notes for peer review.",
-    date: "April 2026",
-    status: "Current",
-    highlights: [
-      "Baseline Pulse Index established across 5 dimensions",
-      "Repair velocity inversely correlated with relationship duration",
-      "January shows highest drift scores (post-holiday recalibration)",
-      "Methodology appendix with full statistical approach",
-    ],
-  },
-];
 
 const upcomingReports = [
   {
@@ -67,6 +51,7 @@ const researchPapers = [
 ];
 
 export default function PublicationsPage() {
+  const publishedReports = getReportsNewestFirst();
   return (
     <div>
       {/* Hero */}
@@ -100,41 +85,45 @@ export default function PublicationsPage() {
           Published every quarter. Free. Open. Population-level relationship
           health data with full methodology disclosure.
         </p>
-        {quarterlyReports.map((report) => (
-          <div
-            key={report.title}
-            className="bg-surface rounded-2xl border border-border-light overflow-hidden mb-6"
-          >
-            <div className="bg-gradient-to-r from-brand-50 to-coral-50 px-7 py-4 border-b border-border-light">
-              <div className="flex items-center gap-3 mb-1">
+        {publishedReports.length > 0 ? (
+          publishedReports.map((report) => (
+            <Link
+              key={report.slug}
+              href={`/pulse-index/${report.slug}`}
+              className="block bg-surface rounded-2xl border border-border-light overflow-hidden mb-6 hover:border-brand-200 transition-colors"
+            >
+              <div className="bg-gradient-to-r from-brand-50 to-coral-50 px-7 py-4 border-b border-border-light">
                 <span className="text-xs font-semibold text-brand-600 bg-brand-100 px-2 py-0.5 rounded-full">
-                  {report.status}
+                  {quarterLabel(report.quarter)} {report.year}
                 </span>
-                <span className="text-xs text-slate-faint">{report.date}</span>
+                <h3 className="text-lg font-semibold text-foreground mt-1">
+                  {report.title}
+                </h3>
               </div>
-              <h3 className="text-lg font-semibold text-foreground">
-                {report.title}
-              </h3>
-              <p className="text-sm text-slate-muted">{report.subtitle}</p>
-            </div>
-            <div className="p-7">
-              <p className="text-sm text-slate-muted leading-relaxed mb-5">
-                {report.description}
-              </p>
-              <h4 className="text-xs font-semibold text-slate-faint uppercase tracking-wider mb-3">
-                Key Highlights
-              </h4>
-              <ul className="space-y-2">
-                {report.highlights.map((highlight, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-400 mt-1.5 shrink-0" />
-                    <span className="text-sm text-slate-text">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <div className="p-7">
+                <p className="text-sm text-slate-muted leading-relaxed">
+                  {report.summary}
+                </p>
+                <p className="text-xs text-slate-faint mt-4">
+                  Based on {report.coupleCount.toLocaleString()} consented
+                  couples. K-anonymity floor: {report.kAnonymityThreshold}.
+                </p>
+              </div>
+            </Link>
+          ))
+        ) : (
+          <div className="bg-surface rounded-2xl border border-border-light p-7 mb-6">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              The inaugural Pulse Index report is in preparation
+            </h3>
+            <p className="text-sm text-slate-muted leading-relaxed max-w-lg">
+              Our first quarterly report covers January through March 2026. It
+              publishes once the consented cohort clears our K-anonymity floor
+              and the methodology has been reviewed. We would rather hold a
+              report than rush a finding.
+            </p>
           </div>
-        ))}
+        )}
 
         {/* Upcoming */}
         <h3 className="text-base font-semibold text-foreground mt-10 mb-4">

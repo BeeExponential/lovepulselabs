@@ -120,15 +120,20 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
             src="/logo/love-pulse-labs-mark.png"
-            alt="Love Pulse Labs"
+            alt=""
             width={36}
             height={36}
             className="w-9 h-9"
             priority
           />
-          <span className="text-lg font-semibold text-foreground tracking-tight">
-            Love Pulse Labs
-          </span>
+          <Image
+            src="/logo/love-pulse-labs-wordmark.png"
+            alt="Love Pulse Labs"
+            width={1158}
+            height={153}
+            className="h-7 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

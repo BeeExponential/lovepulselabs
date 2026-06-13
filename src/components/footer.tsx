@@ -11,14 +11,18 @@ export function Footer() {
             <div className="flex items-center gap-2.5 mb-3">
               <Image
                 src="/logo/love-pulse-labs-mark.png"
-                alt="Love Pulse Labs"
+                alt=""
                 width={30}
                 height={30}
                 className="w-7 h-7"
               />
-              <span className="text-base font-semibold text-foreground tracking-tight">
-                Love Pulse Labs
-              </span>
+              <Image
+                src="/logo/love-pulse-labs-wordmark.png"
+                alt="Love Pulse Labs"
+                width={1158}
+                height={153}
+                className="h-6 w-auto"
+              />
             </div>
             <p className="text-sm text-slate-muted leading-relaxed max-w-xs">
               Studying the patterns behind real relationships. A sister company

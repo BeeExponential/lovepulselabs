@@ -10,10 +10,10 @@ export function Footer() {
           <div className="col-span-2">
             <div className="flex items-center gap-2.5 mb-3">
               <Image
-                src="/logo/love-pulse-labs.svg"
+                src="/logo/love-pulse-labs-mark.png"
                 alt="Love Pulse Labs"
-                width={28}
-                height={28}
+                width={30}
+                height={30}
                 className="w-7 h-7"
               />
               <span className="text-base font-semibold text-foreground tracking-tight">

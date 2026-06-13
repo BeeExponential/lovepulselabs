@@ -119,11 +119,11 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
-            src="/logo/love-pulse-labs.svg"
+            src="/logo/love-pulse-labs-mark.png"
             alt="Love Pulse Labs"
-            width={32}
-            height={32}
-            className="w-8 h-8"
+            width={36}
+            height={36}
+            className="w-9 h-9"
             priority
           />
           <span className="text-lg font-semibold text-foreground tracking-tight">

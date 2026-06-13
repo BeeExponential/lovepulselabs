@@ -37,10 +37,16 @@ const KEY_FACTS = [
 
 const BRAND_ASSETS = [
   {
+    name: "Full lockup",
+    description: "PNG, transparent. Mark, wordmark, and tagline. Use on light backgrounds.",
+    href: "/logo/love-pulse-labs-lockup.png",
+    filename: "love-pulse-labs-lockup.png",
+  },
+  {
     name: "Primary mark",
-    description: "SVG. Use on light backgrounds.",
-    href: "/logo/love-pulse-labs.svg",
-    filename: "love-pulse-labs.svg",
+    description: "PNG, transparent. The heartbeat mark on its own, for avatars and icons.",
+    href: "/logo/love-pulse-labs-mark.png",
+    filename: "love-pulse-labs-mark.png",
   },
 ];
 

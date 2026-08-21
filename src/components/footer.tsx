@@ -28,7 +28,7 @@ export function Footer() {
               Studying the patterns behind real relationships. A sister company
               of{" "}
               <a
-                href="https://lvrsfrvr.com"
+                href="https://lvrsfrvr.com?src=lpl-footer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-500 hover:text-brand-600 transition-colors"
@@ -48,6 +48,11 @@ export function Footer() {
               <li>
                 <Link href="/pulse-index" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
                   Pulse Index
+                </Link>
+              </li>
+              <li>
+                <Link href="/instruments" className="text-sm text-slate-muted hover:text-brand-500 transition-colors">
+                  Instruments
                 </Link>
               </li>
               <li>
@@ -130,7 +135,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://lvrsfrvr.com"
+                  href="https://lvrsfrvr.com?src=lpl-footer"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-slate-muted hover:text-brand-500 transition-colors"

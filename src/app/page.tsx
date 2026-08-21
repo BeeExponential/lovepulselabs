@@ -276,7 +276,7 @@ export default function Home() {
               Love Pulse Labs is the science.
               <br />
               <a
-                href="https://lvrsfrvr.com"
+                href="https://lvrsfrvr.com?src=lpl-home"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-500 hover:text-brand-600 transition-colors"

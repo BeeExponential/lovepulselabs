@@ -118,7 +118,7 @@ export default function MissionPage() {
           <div className="space-y-5 text-slate-text leading-relaxed">
             <p>
               <a
-                href="https://lvrsfrvr.com"
+                href="https://lvrsfrvr.com?src=lpl-mission"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-500 hover:text-brand-600 transition-colors font-medium"
@@ -233,7 +233,7 @@ export default function MissionPage() {
               Join the Mission
             </Link>
             <a
-              href="https://lvrsfrvr.com"
+              href="https://lvrsfrvr.com?src=lpl-mission"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-7 py-3 text-sm font-medium text-slate-text bg-surface border border-border rounded-xl hover:bg-surface-alt transition-all"

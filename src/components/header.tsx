@@ -15,6 +15,7 @@ const mainLinks = [
 const researchLinks = [
   { href: "/research", label: "Overview" },
   { href: "/pulse-index", label: "The Pulse Index" },
+  { href: "/instruments", label: "Instruments" },
   { href: "/lexicon", label: "Lexicon" },
   { href: "/the-lab", label: "The Lab" },
   { href: "/publications", label: "Publications" },

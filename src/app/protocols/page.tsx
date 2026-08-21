@@ -247,7 +247,7 @@ export default function ProtocolsPage() {
             rituals built on the same data.
           </p>
           <a
-            href="https://lvrsfrvr.com"
+            href="https://lvrsfrvr.com?src=lpl-protocols"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-brand-500 to-coral-500 rounded-xl hover:from-brand-600 hover:to-coral-600 transition-all shadow-sm"

@@ -199,6 +199,16 @@ export default function MethodologyPage() {
             </li>
             <li>
               <Link
+                href="/instruments"
+                className="text-brand-500 hover:text-brand-600 underline font-medium"
+              >
+                Instruments
+              </Link>{" "}
+              for the measurement instruments we develop and maintain,
+              beginning with the Drift Check.
+            </li>
+            <li>
+              <Link
                 href="/lexicon"
                 className="text-brand-500 hover:text-brand-600 underline font-medium"
               >

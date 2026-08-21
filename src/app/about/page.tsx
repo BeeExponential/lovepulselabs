@@ -97,7 +97,7 @@ export default function AboutPage() {
               <p>
                 Love Pulse Labs is a sister company of{" "}
                 <a
-                  href="https://lvrsfrvr.com"
+                  href="https://lvrsfrvr.com?src=lpl-about"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-brand-500 hover:text-brand-600 transition-colors font-medium"

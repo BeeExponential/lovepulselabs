@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 const CATEGORY_ORDER: LexiconEntry["category"][] = [
   "framework",
+  "instrument",
   "dimension",
   "metric",
   "consent",

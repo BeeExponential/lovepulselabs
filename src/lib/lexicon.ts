@@ -15,7 +15,7 @@ export type LexiconEntry = {
   slug: string;
   term: string;
   shortDefinition: string;
-  category: "dimension" | "metric" | "framework" | "consent";
+  category: "dimension" | "metric" | "framework" | "instrument" | "consent";
   body: {
     definition: string;
     howMeasured: string;
@@ -177,6 +177,24 @@ export const LEXICON: LexiconEntry[] = [
     firstPublishedAt: "2026-05-13",
     definitionVersion: "1.0",
   },
+  {
+    slug: "drift-check",
+    term: "The Drift Check",
+    shortDefinition:
+      "A free 24-item self-report screener that identifies which of the Four Conditions of Disconnection is most present in a relationship right now.",
+    category: "instrument",
+    body: {
+      definition:
+        "The Drift Check is the front-of-pipeline measurement instrument developed for the Love Pulse Labs research program. It is a structured self-report screener, completed by one partner in about five minutes, that screens for early relationship drift across the Four Conditions of Disconnection: The Drift, The Quiet, Later, and Signal Loss. It is designed for couples who believe everything is fine, which is precisely the population in which drift begins.",
+      howMeasured:
+        "Twenty-four items, self-report, one administration per partner. Scoring is immediate and automated, and results are expressed as patterns to act on rather than grades or failure states. The instrument is administered free of charge at lvrsfrvr.com/drift-check on the LVRS FRVR consumer platform. In aggregate, with both-partner Tier 2 consent and the K-anonymity floor of fifty couples, drift-screening patterns contribute to population-level reporting. No individual result is ever published or licensed.",
+      whyItMatters:
+        "Nearly all measurement in relationship science is administered to couples already in distress, which means the field's data begins where prevention ends. A screener built for couples who are still fine, administered at population scale under consent, is what makes the study of early drift possible at all. The Drift Check is a screener, not a diagnostic instrument, and it has not yet undergone formal psychometric validation. Its current standing is stated plainly on the Instruments page and will be updated as validation work is published.",
+      relatedTerms: ["drift-score", "pulse-index"],
+    },
+    firstPublishedAt: "2026-08-21",
+    definitionVersion: "1.0",
+  },
 ];
 
 export function getEntryBySlug(slug: string): LexiconEntry | undefined {
@@ -195,5 +213,6 @@ export const CATEGORY_LABELS: Record<LexiconEntry["category"], string> = {
   framework: "Frameworks",
   dimension: "Dimensions",
   metric: "Metrics",
+  instrument: "Instruments",
   consent: "Consent and Privacy",
 };

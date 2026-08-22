@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -46,6 +47,12 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* First-party page analytics (Vercel). Until 2026-08-22 this site
+            had zero measurement: outbound ?src=lpl-* tags told LF where
+            arrivals came from, but nothing recorded what pages people read
+            HERE. No cookies, no cross-site tracking; consistent with the
+            research-institute privacy posture. */}
+        <Analytics />
       </body>
     </html>
   );
